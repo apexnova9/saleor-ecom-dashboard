@@ -1986,6 +1986,8 @@ export const OrderDetailsFragmentDoc = gql`
   totalBalance {
     ...Money
   }
+  authorizeStatus
+  chargeStatus
   undiscountedTotal {
     net {
       ...Money

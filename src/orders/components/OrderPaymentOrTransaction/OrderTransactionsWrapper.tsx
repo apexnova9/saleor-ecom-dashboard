@@ -15,6 +15,7 @@ import { useStyles } from "../OrderDetailsPage/styles";
 import { OrderDetailsRefundTable } from "../OrderDetailsRefundTable/OrderDetailsRefundTable";
 import OrderGrantedRefunds from "../OrderGrantedRefunds";
 import OrderPaymentSummaryCard from "../OrderPaymentSummaryCard";
+import { OrderPaymentSummarySection } from "../OrderPaymentSummarySection";
 import OrderSummaryCard from "../OrderSummaryCard";
 import OrderTransaction from "../OrderTransaction";
 import OrderTransactionGiftCard from "../OrderTransactionGiftCard";
@@ -54,9 +55,11 @@ export const OrderTransactionsWrapper: React.FC<OrderTransactionsWrapper> = ({
     <>
       <div className={classes.cardGrid}>
         <OrderSummaryCard order={order} />
-        <OrderPaymentSummaryCard order={order} onMarkAsPaid={onMarkAsPaid} />
+        {/* <OrderPaymentSummaryCard order={order} onMarkAsPaid={onMarkAsPaid} /> */}
+        <OrderPaymentSummarySection order={order} />
       </div>
       <CardSpacer />
+      {/* <OrderPaymentSummarySection order={order} /> */}
       <>
         {enabled && (
           <>
